@@ -40,7 +40,7 @@ class AK_BlobTrack:
                 }),
 
                 "blob_outline_thickness": ("INT", {"default": 2, "min": 1, "max": 20}),
-                "blob_outline_color": ("COLOR", {"default": "#ff0000"}),
+                "blob_outline_color": ("STRING", {"default": "#ff0000", "widgetType": "color"}),
                 "blob_outline_alpha": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.0,
@@ -50,7 +50,7 @@ class AK_BlobTrack:
                 }),
 
                 "line_thickness": ("INT", {"default": 2, "min": 1, "max": 20}),
-                "line_color": ("COLOR", {"default": "#00ff00"}),
+                "line_color": ("STRING", {"default": "#00ff00", "widgetType": "color"}),
                 "line_alpha": ("FLOAT", {
                     "default": 1.0,
                     "min": 0.0,
@@ -157,7 +157,6 @@ class AK_BlobTrack:
                     line_color="#00ff00",
                     line_alpha=1.0
                     ):
-
         # Convert input to np.uint8 [0..255]
         if isinstance(image, torch.Tensor):
             image_np = image.cpu().numpy()
