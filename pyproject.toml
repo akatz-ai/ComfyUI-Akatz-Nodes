@@ -3,7 +3,7 @@ name = "comfyui-akatz-nodes"
 description = "Simple custom node pack for nodes I use in my workflows. Includes Dilate Mask Linear for animating masks."
 version = "1.11.1"
 license = {file = "LICENSE"}
-dependencies = ["numpy", "torch", "opencv-python", "pydub"]
+dependencies = ["numpy", "torch", "opencv-python", "pydub", "audioop-lts; python_version >= '3.13'"]
 
 [project.urls]
 Repository = "https://github.com/akatz-ai/ComfyUI-AKatz-Nodes"
